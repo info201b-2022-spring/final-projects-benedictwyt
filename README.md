@@ -31,13 +31,60 @@ Source: https://data2.unhcr.org/en/situations/ukraine
 3. What is the reaction of the war on social meida?
 
 ## Finding Data
+### Ethereum Cryptocurrency Historical Dataset
 
 - Where did you download the data (e.g., a web URL)?
+I downloaded from this website. 
+Link: https://www.kaggle.com/datasets/kaushiksuresh147/ethereum-cryptocurrency-historical-dataset?resource=download 
 
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+Those data were extracted from investing.com. The investing.com collects market value of Ethereum in each week and construct them into a list.
+Those data are related to the price of Ethereum, which is originated in Russian and soon became one the largest cryptocurrency in the world.
+They are generated based on the open, close, high, and lows in the market price for the currency as well as the volume of a week. It is generated to help
+people understand the price change of Ethereum over years. 
 
 - How many observations (rows) are in your data?
+There are 2229 observation done in this data. 
 
 - How many features (columns) are in the data?
+There are 6 features in this data
 
 - What questions (from above) can be answered using the data in this dataset?
+I can found out the change of Ethereum price during the Ukraine Russia War with calculation of highs and lows, as well as market volume. 
+
+### Russia Equipment losses
+
+- Where did you download the data (e.g., a web URL)?
+Kaggle: https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
+
+- How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+The data is collected by Armed Forces of Ukraine and Ministry of Defence of Ukraine. This data is about the equipment losses of Russia on each date.
+Equipment includes tank, aircraft, and helicopters ect.
+
+- How many observations (rows) are in your data?
+64 rows, which is the days of the war
+
+- How many features (columns) are in the data?
+15 columns, including different types of equipment.
+
+- What questions (from above) can be answered using the data in this dataset?
+What is the average amount of losses in a day?
+What type of equipment lost the most in the war?
+
+### Russia vs Ukraine Tweets Dataset
+
+- Where did you download the data (e.g., a web URL)?
+I downloaded from Kaggle. 
+Link: https://www.kaggle.com/datasets/towhidultonmoy/russia-vs-ukraine-tweets-datasetdaily-updated?resource=download
+
+- How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+The data were collected from Tweeter. The data were collected by Towhidul Tonmoy. The dataset collects tweets regarding Russia and Ukraine from 21st February till date.
+
+- How many observations (rows) are in your data?
+There are 10013 observations in the data.
+
+- How many features (columns) are in the data?
+There are 36 features in the data.
+
+- What questions (from above) can be answered using the data in this dataset?
+I can find out the public pressure and the heat of this special topic on social media.
