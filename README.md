@@ -4,11 +4,13 @@ Group B-25: Joshua Chen, Derek Lu, Benedict Wang, Fan Bu
 ## Domain of interest
 ### Ukraine War
 - Why are you interested in this field/domain?
+
 We are interested in this field because we want to see the war through the eyes of statistics. Apart from acquiring informaiton from the news media and other
 text-based contents, we try to collect some data and bring a data-driven persepective to the audiences. The cause of a war is complicated and the impacts on 
 both countries is significant and extensive. To have a deeper understanding of the war, we plan to interpret the war with the dataset on the internet.
 
 - What other examples of data driven project have you found related to this domain (share at least 3)?
+
 1. The first data driven project I found was the analysis and summary about the exchange rate of Russian Ruble to the other major currencies.
 The research utilized data since 25 years ago to make a line graph demonstrating the fluctuation of the Russian Ruble. It also included forecast for the next 
 year and a table comparing the daily change of Ruble's exchange rate with different currencies.
@@ -23,6 +25,7 @@ cumulative number of people fleeing from Ukraine. Moreover, there were a table l
 Source: https://data2.unhcr.org/en/situations/ukraine
 
 - What data-driven questions do you hope to answer about this domain (share at least 3)?
+
 1. How is the exchange rate of Russia Ruble to Dollar impacted by the Ukraine war?
 2. How much is the equipment loss of the troops every day?
 3. What is the reaction of the war on social meida?
