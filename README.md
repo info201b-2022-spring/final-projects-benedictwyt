@@ -33,10 +33,9 @@ Source: https://data2.unhcr.org/en/situations/ukraine
 ## Finding Data
 ### Ethereum Cryptocurrency Historical Dataset
 
-- Where did you download the data (e.g., a web URL)?
+- Where did you download the data (e.g., a web URL)?\
 
-I downloaded from this website. 
-
+I downloaded from this website.\
 Link: https://www.kaggle.com/datasets/kaushiksuresh147/ethereum-cryptocurrency-historical-dataset?resource=download 
 
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
