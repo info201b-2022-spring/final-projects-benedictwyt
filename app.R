@@ -1,6 +1,9 @@
+#Package---------------------------------------------------------------------------------------
 library(shiny)
 library(dplyr)
 library(fmsb)
+library(shinyWidgets)
+
 #data-----------------------------------------------------------------------------------------
 bank_VTBR_df <- read.csv("VTBR Historical Data.csv")
   bank_VTBR_df <- select(bank_VTBR_df, ï..Date, Price)
@@ -29,14 +32,24 @@ char_df <- setNames(char_df, c("Date", "Bank","Ebank","Telecom", "Oil", "Airline
 #app----------------------------------------------------------------------------------------
 ui <- fluidPage(
   h1("Impact on Russian Corporations' Stock Value"),
-  selectInput(
-    inputId = "char", 
-    label = "Select a Date", 
+  em(h5("Which Industy is Most Significantly Damaged by the War?")),
+  setBackgroundColor("ghostwhite"),
+  br(),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+      inputId = "char", 
+      label = "Select a Date", 
       choices = char_df$Date
-  ),
-  tableOutput(outputId = "table"), 
-  plotOutput(outputId = "radar")
-)
+    ), 
+    h6("Note: Selecting a date allow you to visual view the table that day with the chart:)"),
+    img(src = "Stock.png", height = 49.9*1.9, width = 120*1.9)),
+    mainPanel(
+      h5(strong("Table Value of the Day"), h6("(Unit: USD)")),
+      tableOutput(outputId = "table"), 
+      plotOutput(outputId = "radar")
+    )
+))
 
 server <- function(input, output) {
   make_rader_df <- function(char_name){
