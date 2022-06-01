@@ -3,6 +3,14 @@ library("dplyr")
 library("ggplot2")
 library("plotly")
 
+# This page analyzes there main types of equipments that used by Russia, which
+# is aircraft, helicopter, and tank. At the beginging of the war, the losses of
+# each equipment are a lot, which can indicate the war peak is at the beginning.
+# As times passes by, the losses of aircraft and helicopter decrease, but the
+# loss of tank still fluctuates a lot, which can indicate the war is mainly on
+# land afterwards.In conclusion, this page can infer the battle situation from
+# time to time.
+
 #load in data
 equipment_loss <- read.csv("russia_losses_equipment.csv")
 equipment_loss_new <- mutate(equipment_loss, new_aircraft = aircraft - lag(aircraft)) %>%
