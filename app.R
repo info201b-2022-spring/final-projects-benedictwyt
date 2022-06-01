@@ -29,6 +29,7 @@ char_df <- merge(char_df, airline_AFLT_df, by = "ï..Date")
 
 char_df <- setNames(char_df, c("Date", "Bank","Ebank","Telecom", "Oil", "Airline"))
 
+
 #app----------------------------------------------------------------------------------------
 ui <- fluidPage(
   h1("Impact on Russian Corporations' Stock Value"),
