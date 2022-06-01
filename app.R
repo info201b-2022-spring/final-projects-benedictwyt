@@ -43,7 +43,7 @@ ui <- fluidPage(
       choices = char_df$Date
     ), 
     h6("Note: Selecting a date allow you to vividly view the values on the table during that day via a fine Radar Chart: )"),
-    img(src = "Radar Chart data/Stock.png", height = 49.9*1.9, width = 120*1.9)),
+    img(src = "Stock.jpeg", height = 49.9*1.9, width = 120*1.9)),
     mainPanel(
       h5(strong("Table Value of the Day"), h6("(Unit: USD)")),
       tableOutput(outputId = "table"),
