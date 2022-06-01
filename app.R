@@ -1,7 +1,7 @@
 library(shiny)
 library(dplyr)
 library(fmsb)
-
+#data-----------------------------------------------------------------------------------------
 bank_VTBR_df <- read.csv("VTBR Historical Data.csv")
   bank_VTBR_df <- select(bank_VTBR_df, ï..Date, Price)
 
@@ -26,7 +26,9 @@ char_df <- merge(char_df, airline_AFLT_df, by = "ï..Date")
 
 char_df <- setNames(char_df, c("Date", "Bank","Ebank","Telecom", "Oil", "Airline"))
 
+#app----------------------------------------------------------------------------------------
 ui <- fluidPage(
+  h1("Impact on Russian Corporations' Stock Value"),
   selectInput(
     inputId = "char", 
     label = "Select a Date", 
