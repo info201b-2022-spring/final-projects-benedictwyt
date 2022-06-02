@@ -29,6 +29,7 @@ char_df <- merge(char_df, airline_AFLT_df, by = "ï..Date")
 
 char_df <- setNames(char_df, c("Date", "Bank","Ebank","Telecom", "Oil", "Airline"))
 
+
 #app----------------------------------------------------------------------------------------
 ui <- fluidPage(
   h1("Impact on Russian Corporations' Stock Value"),
@@ -43,7 +44,7 @@ ui <- fluidPage(
       choices = char_df$Date
     ), 
     h6("Note: Selecting a date allow you to vividly view the values on the table during that day via a fine Radar Chart: )"),
-    img(src = "Radar Chart data/Stock.png", height = 49.9*1.9, width = 120*1.9)),
+    img(src = "Stock.jpeg", height = 49.9*1.9, width = 120*1.9)),
     mainPanel(
       h5(strong("Table Value of the Day"), h6("(Unit: USD)")),
       tableOutput(outputId = "table"),
