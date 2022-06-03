@@ -10,28 +10,58 @@ library(plotly)
 
 bufan_intro_page <- tabPanel(
   "Introduction", 
+  img(src = "peace.jpeg", height = 400, width = 800),
   h1("Introduction"),
-  p("Ever since the war between Russia and Ukraine has been declear,
-     it became one of the topics that each indicidual should know.
-     For data scientists, the war provides us the opportunities to
-     collect the data of a modern war, to see what elements are more important,
-     and what elements are less important in a modern war. We also want to know
-     what impact the war will caluse on economic, currency, and social structural.
-     Our project will explore those."),
-  img(src = "peace.jpeg", height = 400, width = 800)
+  p("Ever since the war between Russia and Ukraine has been declared,
+    it became one of the topics that each individual should know.
+    For data scientists, the war provides us the opportunities to collect data on modern war,
+    to see what equipments are commonly used in a modern wa. We also want to know what impact
+    the war will cause on currency and the stock market, and which industry was damaged the most"),
+  p(),
+  p("Our ptoject will first analyzes how the war impace the USD to Russian Ruble exchange rate
+    on \"Currency Analysis\" page using \"Russia Ruble to USD/USD_RUB Historical Data.csv\""),
+  p(),
+  p("Our project will then analyzes three main types of equipments that used by Russia on 
+    \"Equipment Loss Analysis\" page using \"russia_losses_equipment.csv\". This dataset was collected
+    by Armed Forces of Ukraine and Ministry of Defence of Ukraine. Those data are about the 
+    equipment losses of Russia on each date. Equipment includes tank, aircraft, and helicopters ect."),
+  p(),
+  p("Our project will finally analyzes the impact on russian coporations' stock value and which industry
+    is most significantly damaged on \"Russia Based Firms' Stock Values Analysis\" page using
+    \"Radar Chart data/VTBR Historical Data.csv\" , \"Radar Chart data/QIWIDR Historical Data.csv\"
+    \"Radar Chart data/MTSS Historical Data.csv\", \"Radar Chart data/LKOH Historical Data.csv\", 
+    and \"Radar Chart data/AFLT Historical Data.csv\"")
 )
+
 bufan_takeaway_page <-
   tabPanel(
     "Takeaway", 
-    h1("Introduction"),
-    p("Ever since the war between Russia and Ukraine has been declear,
-     it became one of the topics that each indicidual should know.
-     For data scientists, the war provides us the opportunities to
-     collect the data of a modern war, to see what elements are more important,
-     and what elements are less important in a modern war. We also want to know
-     what impact the war will caluse on economic, currency, and social structural.
-     Our project will explore those."),
-    img(src = "peace.jpeg", height = 400, width = 800)
+    h1("Summary Takeaways"),
+    p("On this page, we will provide some conclusions from our perspectives after analyzing the data."),
+    p(),
+    h3("Currency Analysis"),
+    img(src = "exchange_rate.png", height = 200, width = 400),
+    p(),
+    p("As we can see on the graph, the exchange rate of the USD to the Ruble increased dramatically
+      at the beginning of the war. However, with the continuing of the war, the Russian government
+      issued some policies regarding the depreciation of the Russian ruble, and with those policies,
+      the Russian ruble is becoming more and more appreciated. The rate nowadays is even lower than
+      the rate before the war, which means the rubles one dollar can exchane became less."),
+    p(),
+    h3("Equipment Loss Analysis"),
+    img(src = "Equip_loss.jpg", height = 200, width = 1000),
+    p(),
+    p("As we can see on the graph, at the begining of the war, the losses of each equipment are a lot, which can indicate 
+    the war peak is at the beginning. As times passes by, the losses of aircraft and helicopter decrease, but the
+    loss of tank still fluctuates a lot, which can indicate the war is mainly on land afterwards."),
+    p(),
+    h3("Russia Based Firms' Stock Values Analysis"),
+    img(src = "Price.jpg", height = 200, width = 800),
+    p(),
+    p("As we can see on the graph, basically all industries we analyzed (Bank, E-Bank, Telecom, Oil, and Airline) 
+      got damaged severely from the beginning of the war (2/10/2022) to the day we produce this report (5/6/2022). 
+      In addition, we can see that the damage to E-bank, Bank, and Airline industries are relatively heaver than the 
+      industries of Oil and Telecom.")
   )
 
 #Joshua ----------------------------------------------------------------------------------------
@@ -102,11 +132,7 @@ derek_analysis_page <- tabPanel(
                                   "Tank" = 3),
                    selected = 1),
       p("This page analyzes three main types of equipments that used by Russia, which
-    are aircraft, helicopter, and tank. At the begining of the war, the losses of
-    each equipment are a lot, which can indicate the war peak is at the beginning.
-    As times passes by, the losses of aircraft and helicopter decrease, but the
-    loss of tank still fluctuates a lot, which can indicate the war is mainly on
-    land afterwards.In conclusion, this page can infer the battle situation from
+    are aircraft, helicopter, and tank. It can infer the battle situation from
     time to time. By clicking the dot in the graph, you can see the actual number
     of that equipment on that day.")
     ),
