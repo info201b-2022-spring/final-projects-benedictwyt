@@ -1,0 +1,85 @@
+#Package---------------------------------------------------------------------------------------
+library(shiny)
+library(dplyr)
+library(fmsb)
+library(shinyWidgets)
+
+#data-----------------------------------------------------------------------------------------
+bank_VTBR_df <- read.csv("Radar Chart data/VTBR Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+  bank_VTBR_df <- select(bank_VTBR_df, Date, Price)
+
+ebank_QIWI_df <- read.csv("Radar Chart data/QIWIDR Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+  ebank_QIWI_df <- select(ebank_QIWI_df, Date, Price)
+  
+telecom_MTSS_df <- read.csv("Radar Chart data/MTSS Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+  telecom_MTSS_df <- select(telecom_MTSS_df, Date, Price)
+
+oil_LKOH_df <- read.csv("Radar Chart data/LKOH Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+  oil_LKOH_df <- select(oil_LKOH_df, Date, Price)
+
+airline_AFLT_df <- read.csv("Radar Chart data/AFLT Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+  airline_AFLT_df <- select(airline_AFLT_df, Date, Price)
+
+
+char_df <- merge(bank_VTBR_df, ebank_QIWI_df, by = "Date")
+char_df <- merge(char_df, telecom_MTSS_df, by = "Date")
+char_df <- merge(char_df, oil_LKOH_df, by = "Date")
+char_df <- merge(char_df, airline_AFLT_df, by = "Date")
+
+char_df <- setNames(char_df, c("Date", "Bank","E-Bank","Telecom", "Oil", "Airline"))
+
+
+#app----------------------------------------------------------------------------------------
+ui <- fluidPage(
+  h1("Impact on Russian Corporations' Stock Value"),
+  em(h5("Which Industy is Most Significantly Damaged by the War?")),
+  setBackgroundColor("ghostwhite"),
+  br(),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+      inputId = "char", 
+      label = "Select a Date", 
+      choices = char_df$Date
+    ), 
+    h6(strong("Note:")),
+    h6("Selecting a date allow you to vividly view the values on the table during that day via a fine Radar Chart: )",
+    img(src = "Stock.jpeg", height = 49.9*1.9, width = 120*1.9)), 
+    br(),
+    h5(strong("Terms:")),
+    h6("- Bank (VTB Bank): Russian majority state-owned bank headquartered in various federal districts of Russia"), 
+    h6("- E-Bank (QIWI): Russian company that provides payment and financial services in Russia and CIS countries"), 
+    h6("- Telecom (Mobile TeleSystems): Russia's largest mobile operator and a leading provider of media and digital services"), 
+    h6("- Oil (The PJSC Lukoil Oil Company): Russian multinational energy corporation headquartered in Moscow, specializing in the business of extraction, production, transport, and sale of petroleum, natural gas, and petroleum products"), 
+    h6("- Airline (Aeroflot-Rossiyskiye Avialinii): The flag carrier and the largest airline of Russia")), 
+    mainPanel(
+      h5(strong("Table Value of the Day"), h6("(Unit: USD)")),
+      tableOutput(outputId = "table"),
+      h5(strong("The Radar Chart")),
+      plotOutput(outputId = "radar")
+    )
+)
+)
+
+server <- function(input, output) {
+  make_rader_df <- function(char_name){
+    rd_df <- select(char_df, - Date)
+    min_df <- summarise_all(rd_df, min)
+    max_df <- summarise_all(rd_df, max)
+    
+    data_pt <- filter(char_df, Date == char_name)
+    data_pt <- select(data_pt, - Date)
+    
+    return(do.call("rbind", list(max_df,min_df, data_pt)))
+  }
+  
+  output$table <- renderTable({
+    return(make_rader_df(input$char))
+    
+  })
+  output$radar <- renderPlot({
+    radarchart(make_rader_df(input$char))
+  })
+}
+
+shinyApp(ui = ui, server = server)
