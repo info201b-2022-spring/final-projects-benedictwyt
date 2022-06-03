@@ -10,16 +10,16 @@ library(plotly)
 
 bufan_intro_page <- tabPanel(
   "Introduction", 
-  img(src = "peace.jpeg", height = 400, width = 800),
+  img(src = "peace.jpeg", height = 400*1.095, width = 800*1.095),
   h1("Introduction"),
   p("Ever since the war between Russia and Ukraine has been declared,
     it became one of the topics that each individual should know.
     For data scientists, the war provides us the opportunities to collect data on modern war,
     to see what equipments are commonly used in a modern wa. We also want to know what impact
-    the war will cause on currency and the stock market, and which industry was damaged the most"),
+    the war will cause on currency and the stock market, and which industry was damaged the most."),
   p(),
   p("Our ptoject will first analyzes how the war impace the USD to Russian Ruble exchange rate
-    on \"Currency Analysis\" page using \"Russia Ruble to USD/USD_RUB Historical Data.csv\""),
+    on \"Currency Analysis\" page using \"Russia Ruble to USD/USD_RUB Historical Data.csv\"."),
   p(),
   p("Our project will then analyzes three main types of equipments that used by Russia on 
     \"Equipment Loss Analysis\" page using \"russia_losses_equipment.csv\". This dataset was collected
@@ -30,7 +30,7 @@ bufan_intro_page <- tabPanel(
     is most significantly damaged on \"Russia Based Firms' Stock Values Analysis\" page using
     \"Radar Chart data/VTBR Historical Data.csv\" , \"Radar Chart data/QIWIDR Historical Data.csv\"
     \"Radar Chart data/MTSS Historical Data.csv\", \"Radar Chart data/LKOH Historical Data.csv\", 
-    and \"Radar Chart data/AFLT Historical Data.csv\"")
+    and \"Radar Chart data/AFLT Historical Data.csv\".")
 )
 
 bufan_takeaway_page <-
@@ -59,9 +59,9 @@ bufan_takeaway_page <-
     img(src = "Price.jpg", height = 200, width = 800),
     p(),
     p("As we can see on the graph, basically all industries we analyzed (Bank, E-Bank, Telecom, Oil, and Airline) 
-      got damaged severely from the beginning of the war (2/10/2022) to the day we produce this report (5/6/2022). 
-      In addition, we can see that the damage to E-bank, Bank, and Airline industries are relatively heaver than the 
-      industries of Oil and Telecom.")
+      got damaged severely during the war(Example.Date => 5/6/2022) comparing to the status before the war (Example.Date => 2/10/2022). 
+      In addition, we can see that the damage to E-bank, Bank, and Airline industries reamins to be relatively heavier than the 
+      industries of Oil and Telecom as the war begin to cool down, meaning those industies took more time to recover.")
   )
 
 #Joshua ----------------------------------------------------------------------------------------
