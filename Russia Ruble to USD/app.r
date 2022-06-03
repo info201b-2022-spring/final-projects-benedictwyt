@@ -4,7 +4,7 @@ library(ggplot2)
 library(plotly)
 
 #load in data
-exchange_rate_df <- read.csv("USD_RUB Historical Data.csv")
+exchange_rate_df <- read.csv("USD_RUB Historical Data.csv", fileEncoding = 'UTF-8-BOM')
 
 #cleaning and merging df
 
