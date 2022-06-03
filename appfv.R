@@ -110,6 +110,30 @@ derek_analysis_page <- tabPanel(
 )
 
 #Benedict-------------------------------------------------------------------------------------------------
+        #data-----------------------------------------------------------------------------------------
+bank_VTBR_df <- read.csv("Radar Chart data/VTBR Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+bank_VTBR_df <- select(bank_VTBR_df, Date, Price)
+
+ebank_QIWI_df <- read.csv("Radar Chart data/QIWIDR Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+ebank_QIWI_df <- select(ebank_QIWI_df, Date, Price)
+
+telecom_MTSS_df <- read.csv("Radar Chart data/MTSS Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+telecom_MTSS_df <- select(telecom_MTSS_df, Date, Price)
+
+oil_LKOH_df <- read.csv("Radar Chart data/LKOH Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+oil_LKOH_df <- select(oil_LKOH_df, Date, Price)
+
+airline_AFLT_df <- read.csv("Radar Chart data/AFLT Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+airline_AFLT_df <- select(airline_AFLT_df, Date, Price)
+
+
+char_df <- merge(bank_VTBR_df, ebank_QIWI_df, by = "Date")
+char_df <- merge(char_df, telecom_MTSS_df, by = "Date")
+char_df <- merge(char_df, oil_LKOH_df, by = "Date")
+char_df <- merge(char_df, airline_AFLT_df, by = "Date")
+
+char_df <- setNames(char_df, c("Date", "Bank","E-Bank","Telecom", "Oil", "Airline"))
+          #UI 
 benedict_analysis_page <- tabPanel(
   "Russia Based Firms' Stock Values Analysis",
   h1("Impact on Russian Corporations' Stock Value"),
