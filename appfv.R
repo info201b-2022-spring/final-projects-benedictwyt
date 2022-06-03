@@ -100,7 +100,15 @@ derek_analysis_page <- tabPanel(
                    choices = list("Aircraft" = 1,
                                   "Helicopter" = 2,
                                   "Tank" = 3),
-                   selected = 1)
+                   selected = 1),
+      p("This page analyzes three main types of equipments that used by Russia, which
+    are aircraft, helicopter, and tank. At the begining of the war, the losses of
+    each equipment are a lot, which can indicate the war peak is at the beginning.
+    As times passes by, the losses of aircraft and helicopter decrease, but the
+    loss of tank still fluctuates a lot, which can indicate the war is mainly on
+    land afterwards.In conclusion, this page can infer the battle situation from
+    time to time. By clicking the dot in the graph, you can see the actual number
+    of that equipment on that day.")
     ),
     mainPanel(
       plotOutput(outputId = "line", click = "plot_click"),
