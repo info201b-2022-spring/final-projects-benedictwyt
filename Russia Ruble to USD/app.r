@@ -16,6 +16,7 @@ exchange_rate_df <- exchange_rate_df %>%
 data_df <- exchange_rate_df %>%
   mutate(day = 1:nrow(exchange_rate_df))
 
+
 filter_df <- data_df
 
 #set up the UI
