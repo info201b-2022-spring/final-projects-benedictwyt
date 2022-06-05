@@ -42,11 +42,17 @@ bufan_takeaway_page <-
     h3("Currency Analysis"),
     img(src = "exchange_rate.png", height = 200, width = 400),
     p(),
-    p("As we can see on the graph, the exchange rate of the USD to the Ruble increased dramatically
-      at the beginning of the war. However, with the continuing of the war, the Russian government
-      issued some policies regarding the depreciation of the Russian ruble, and with those policies,
-      the Russian ruble is becoming more and more appreciated. The rate nowadays is even lower than
-      the rate before the war, which means the rubles one dollar can exchane became less."),
+    p("As we can see on the graph, the exchange rate of the USD to the Ruble 
+      increased dramatically at the beginning of the war. It means that the 
+      value of the Russian Ruble was depreciated. When the Biden administrateion 
+      banned the U.S. imports of Russian oil and gas on May 7th, the rate reached
+      its highest point. However, with the continuing of the war, the Russian 
+      government jacked up the interest rate to 20% and imposed strict capital 
+      controls on those wishing to exchange their rubles for dollars. These 
+      policies successfully recovered the Russian ruble to its original price. 
+      Nowadays, the rate is even lower than the rate before the war, which means
+      the rubles one dollar exchange decrease. But it is noteworthy to 
+      observe how long the policies can sustain without harming the Russia economy."),
     p(),
     h3("Equipment Loss Analysis"),
     img(src = "Equip_loss.jpg", height = 200, width = 1000),
@@ -95,16 +101,19 @@ joshua_analysis_page <- tabPanel(
       )
     ),
     mainPanel(
-      h5("This page focuses on finding the trend on USD to Russian Ruble 
+      h5("This page focuses on finding the trend of USD to Russian Ruble 
          exchange rate since its invasion into Ukraine on February 24th, 2022. 
-         The scatter plot demonstrates the everyday price of Russian Ruble and 
-         connects them to depicts the trend. The widget on the sidebar allows
-         the users to adjust the day range to zoom in the graph. If the users 
+         The scatter plot demonstrates the everyday price of the Russian Ruble 
+         and connects them to depict the trend. The widget on the sidebar allows
+         the users to adjust the day range to zoom in on the graph. If the users
          click on the dot on the graph, the table below will show more detailed 
          information like the high and low of the price. Moreover, the 
-         candlestick chart clearly visualize the fluctuation and stability of 
+         candlestick chart clearly visualizes the fluctuation and stability of 
          this currency."),
       plotOutput(outputId = "scatter", click = "plot_click"),
+      h6("As we can observe in the chart, the exchange rate surged at the 
+          beginnning of the war and peaked at day 8. After that, the rate slowly 
+          fell and bottomed at day 62."),
       tableOutput(outputId = "data_joshua"),
       plotlyOutput(outputId = "plotlyCandle")
     )
