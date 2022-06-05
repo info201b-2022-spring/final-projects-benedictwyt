@@ -173,6 +173,7 @@ benedict_analysis_page <- tabPanel(
   "Russia Based Firms' Stock Values Analysis",
   h1("Impact on Russian Corporations' Stock Value"),
   em(h5("Which Industy is Most Significantly Damaged by the War?")),
+  h6("Features of this page allows one to explore the effect of the war in the business world. One of the Greta indication of regional market performance is regional-based corporations’ stock values. As you clicked on a certain date, the table below will be generating three rows and fix columns, each columns are labeled with industry names while the rows indicates the Max value, Min value, and the value of the date chosen. As we compare those input value, we can easily see the intensity of the ware comparing to the rest of the days during the war. Besides, the chart below also can allow one to visually see the damage done to various industry, which really turns out to be different during different phrase of the war. Please begin below and try it yourself!"),
   setBackgroundColor("ghostwhite"),
   br(),
   sidebarLayout(
@@ -272,7 +273,6 @@ server <- function(input, output){
     
     data_pt <- filter(char_df, Date == char_name)
     data_pt <- select(data_pt, - Date)
-    
     return(do.call("rbind", list(max_df,min_df, data_pt)))
   }
   
