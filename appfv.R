@@ -5,6 +5,7 @@ library(fmsb)
 library(shinyWidgets)
 library(ggplot2)
 library(plotly)
+library(rsconnect)
 
 #Bufan Part----------------------------------------------------------------------------------
 
