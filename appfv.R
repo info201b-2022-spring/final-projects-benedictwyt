@@ -11,21 +11,21 @@ library(plotly)
 bufan_intro_page <- tabPanel(
   "Introduction", 
   img(src = "peace.jpeg", height = 400*1.095, width = 800*1.095),
-  h1("Introduction"),
+  h1("Introduction Of Our Research:"),
   p("Ever since the war between Russia and Ukraine has been declared,
     it became one of the topics that each individual should know.
     For data scientists, the war provides us the opportunities to collect data on modern war,
-    to see what equipments are commonly used in a modern wa. We also want to know what impact
+    to see what equipments are commonly used in a modern war. We also want to know what impact
     the war will cause on currency and the stock market, and which industry was damaged the most."),
-  p(),
-  p("Our ptoject will first analyzes how the war impace the USD to Russian Ruble exchange rate
+  h5(strong("Analysis Part 1:")),
+  p("Our project will first analyzes how the war impace the USD to Russian Ruble exchange rate
     on \"Currency Analysis\" page using \"Russia Ruble to USD/USD_RUB Historical Data.csv\"."),
-  p(),
+  h5(strong("Analysis Part 2:")),
   p("Our project will then analyzes three main types of equipments that used by Russia on 
     \"Equipment Loss Analysis\" page using \"russia_losses_equipment.csv\". This dataset was collected
     by Armed Forces of Ukraine and Ministry of Defence of Ukraine. Those data are about the 
     equipment losses of Russia on each date. Equipment includes tank, aircraft, and helicopters ect."),
-  p(),
+  h5(strong("Analysis Part 3:")),
   p("Our project will finally analyzes the impact on russian coporations' stock value and which industry
     is most significantly damaged on \"Russia Based Firms' Stock Values Analysis\" page using
     \"Radar Chart data/VTBR Historical Data.csv\" , \"Radar Chart data/QIWIDR Historical Data.csv\"
