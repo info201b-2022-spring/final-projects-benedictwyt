@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://benedictwyt.shinyapps.io/final-projects/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="_w_0c74492b/">--><base href=".">
+    <script type="text/javascript">
+(function() {
+  var workerId = '_w_0c74492b';
+  // remove base href if worker ID is in url
+  if (window.location.href.indexOf(workerId) > 0) {
+    document.querySelector('base').removeAttribute('href');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shinyPre101: false
+      }
+      </script>
+      
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.7.1];shiny-javascript[1.7.1];ionrangeslider-javascript[2.3.1];strftime[0.9.2];ionrangeslider-css[2.3.1];htmlwidgets[1.5.4];plotly-binding[4.10.0];selectize[0.12.4];bootstrap[3.4.1]</script>
+<script src="./Info 201 Final Project_files/jquery.min.js.download"></script>
+<link href="./Info 201 Final Project_files/shiny.min.css" rel="stylesheet">
+<script src="./Info 201 Final Project_files/shiny.min.js.download"></script>
+<script src="./Info 201 Final Project_files/ion.rangeSlider.min.js.download"></script>
+<script src="./Info 201 Final Project_files/strftime-min.js.download"></script>
+<link href="./Info 201 Final Project_files/ion.rangeSlider.css" rel="stylesheet">
+<script src="./Info 201 Final Project_files/htmlwidgets.js.download"></script>
+<script src="./Info 201 Final Project_files/plotly.js.download"></script>
+<link href="./Info 201 Final Project_files/selectize.bootstrap3.css" rel="stylesheet">
+<script src="./Info 201 Final Project_files/selectize.min.js.download"></script>
+<script src="./Info 201 Final Project_files/selectize-plugin-a11y.min.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./Info 201 Final Project_files/bootstrap.min.css" rel="stylesheet">
+<link href="./Info 201 Final Project_files/bootstrap-accessibility.min.css" rel="stylesheet">
+<script src="./Info 201 Final Project_files/bootstrap.min.js.download"></script>
+<script src="./Info 201 Final Project_files/bootstrap-accessibility.min.js.download"></script>  <title>Info 201 Final Project</title>
+  <title>USD to Russia Ruble since the Ukraine war</title>
+  <style>body {background-color: ghostwhite;}</style>
+<script src="./Info 201 Final Project_files/sockjs.min.js.download"></script>
+<script src="./Info 201 Final Project_files/shiny-server-client.min.js.download"></script>
+<script>preShinyInit({reconnect:true,reconnectTimeout:15000,disableProtocols:["htmlfile","xdr-streaming","xdr-polling","websocket"],token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="./Info 201 Final Project_files/rstudio-connect.css">
+<link rel="stylesheet" type="text/css" href="./Info 201 Final Project_files/shinyapps.css"></head>
+<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="" class="">
+<script type="text/javascript" src="./Info 201 Final Project_files/iframeResizer.contentWindow.min.js.download"></script>
+<script type="text/javascript" src="./Info 201 Final Project_files/shinyapps.frame.content.js.download"></script>
+<script type="text/javascript" src="./Info 201 Final Project_files/shinyapps.js.download"></script>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">Info 201 Final Project</span>
+      </div>
+      <ul class="nav navbar-nav" data-tabsetid="5577">
+        <li class="active">
+          <a href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#tab-5577-1" data-toggle="tab" data-bs-toggle="tab" data-value="Introduction">Introduction</a>
+        </li>
+        <li>
+          <a href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#tab-5577-2" data-toggle="tab" data-bs-toggle="tab" data-value="Currency Analysis">Currency Analysis</a>
+        </li>
+        <li>
+          <a href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#tab-5577-3" data-toggle="tab" data-bs-toggle="tab" data-value="Equipment Loss Analysis">Equipment Loss Analysis</a>
+        </li>
+        <li>
+          <a href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#tab-5577-4" data-toggle="tab" data-bs-toggle="tab" data-value="Russia Based Firms&#39; Stock Values Analysis">Russia Based Firms' Stock Values Analysis</a>
+        </li>
+        <li>
+          <a href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#tab-5577-5" data-toggle="tab" data-bs-toggle="tab" data-value="Takeaway">Takeaway</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="tab-content" data-tabsetid="5577">
+      <div class="tab-pane active" data-value="Introduction" id="tab-5577-1">
+        <img src="./Info 201 Final Project_files/peace.jpeg" height="438" width="876">
+        <h1>Introduction</h1>
+        <p>Ever since the war between Russia and Ukraine has been declared,
+    it became one of the topics that each individual should know.
+    For data scientists, the war provides us the opportunities to collect data on modern war,
+    to see what equipments are commonly used in a modern wa. We also want to know what impact
+    the war will cause on currency and the stock market, and which industry was damaged the most.</p>
+        <p></p>
+        <p>Our ptoject will first analyzes how the war impace the USD to Russian Ruble exchange rate
+    on "Currency Analysis" page using "Russia Ruble to USD/USD_RUB Historical Data.csv".</p>
+        <p></p>
+        <p>Our project will then analyzes three main types of equipments that used by Russia on 
+    "Equipment Loss Analysis" page using "russia_losses_equipment.csv". This dataset was collected
+    by Armed Forces of Ukraine and Ministry of Defence of Ukraine. Those data are about the 
+    equipment losses of Russia on each date. Equipment includes tank, aircraft, and helicopters ect.</p>
+        <p></p>
+        <p>Our project will finally analyzes the impact on russian coporations' stock value and which industry
+    is most significantly damaged on "Russia Based Firms' Stock Values Analysis" page using
+    "Radar Chart data/VTBR Historical Data.csv" , "Radar Chart data/QIWIDR Historical Data.csv"
+    "Radar Chart data/MTSS Historical Data.csv", "Radar Chart data/LKOH Historical Data.csv", 
+    and "Radar Chart data/AFLT Historical Data.csv".</p>
+      </div>
+      <div class="tab-pane" data-value="Currency Analysis" id="tab-5577-2">
+        <h2>USD to Russia Ruble since the Ukraine war</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="well" role="complementary">
+              <h3>Day Range</h3>
+              <div class="form-group shiny-input-container">
+                <label class="control-label" id="day-label" for="day">select the day range</label>
+                <span class="irs irs--shiny js-irs-0 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min">1</span><span class="irs-max">66</span><span class="irs-from">0</span><span class="irs-to">0</span><span class="irs-single">0</span></span><span class="irs-grid"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%">1</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden;">7.5</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: hidden;">14</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden;">20.5</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%">27</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden;">33.5</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: hidden;">40</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden;">46.5</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%">53</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden;">59.5</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: hidden;">66</span></span><span class="irs-bar" style="cursor: ew-resize;"></span><span class="irs-shadow shadow-from"></span><span class="irs-shadow shadow-to"></span><span class="irs-handle from"><i></i><i></i><i></i></span><span class="irs-handle to"><i></i><i></i><i></i></span></span><input class="js-range-slider irs-hidden-input shiny-bound-input" id="day" data-skin="shiny" data-type="double" data-min="1" data-max="66" data-from="1" data-to="66" data-step="0.5" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-drag-interval="true" data-data-type="number" tabindex="-1" readonly="">
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-8" role="main">
+            <h5>This page focuses on finding the trend of USD to Russian Ruble 
+         exchange rate since its invasion into Ukraine on February 24th, 2022. 
+         The scatter plot demonstrates the everyday price of the Russian Ruble 
+         and connects them to depict the trend. The widget on the sidebar allows
+         the users to adjust the day range to zoom in on the graph. If the users
+         click on the dot on the graph, the table below will show more detailed 
+         information like the high and low of the price. Moreover, the 
+         candlestick chart clearly visualizes the fluctuation and stability of 
+         this currency.</h5>
+            <div id="scatter" class="shiny-plot-output shiny-bound-output" style="width:100%;height:400px;" data-click-id="plot_click" data-click-clip="TRUE" aria-live="polite"></div>
+            <h6>As we can observe in the chart, the exchange rate surged at the 
+          beginnning of the war and peaked at day 8. After that, the rate slowly 
+          fell and bottomed at day 62.</h6>
+            <div id="data_joshua" class="shiny-html-output shiny-bound-output" aria-live="polite"></div>
+            <div id="plotlyCandle" style="width:100%; height:400px; " class="plotly html-widget html-widget-output shiny-report-size shiny-report-theme shiny-bound-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" data-value="Equipment Loss Analysis" id="tab-5577-3">
+        <h2>Russia Equipment Loss</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="well" role="complementary">
+              <div id="equipment" class="form-group shiny-input-radiogroup shiny-input-container shiny-bound-input" role="radiogroup" aria-labelledby="equipment-label">
+                <label class="control-label" id="equipment-label" for="equipment">Different Types of Equipments: </label>
+                <div class="shiny-options-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="equipment" value="1" checked="checked">
+                      <span>Aircraft</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="equipment" value="2">
+                      <span>Helicopter</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="equipment" value="3">
+                      <span>Tank</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <p>This page analyzes three main types of equipments that used by Russia, which
+    are aircraft, helicopter, and tank. It can infer the battle situation from
+    time to time. By clicking the dot in the graph, you can see the actual number
+    of that equipment on that day.</p>
+            </form>
+          </div>
+          <div class="col-sm-8" role="main">
+            <div id="line" class="shiny-plot-output shiny-bound-output" style="width:100%;height:400px;" data-click-id="plot_click" data-click-clip="TRUE" aria-live="polite"></div>
+            <div id="data_derek" class="shiny-html-output shiny-bound-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" data-value="Russia Based Firms&#39; Stock Values Analysis" id="tab-5577-4">
+        <h1>Impact on Russian Corporations' Stock Value</h1>
+        <h4>
+          <strong>Key Question: </strong>
+        </h4>
+        <em>
+          <h5>Which Industy is Most Significantly Damaged by the War?</h5>
+        </em>
+        <h4>
+          <strong>Features: </strong>
+        </h4>
+        <h5>
+          Features of this page allows one to explore the effect of the war in the business world. One of the great indication of regional market performance is
+          <strong>regional-based corporations’ stock values</strong>
+          . As you clicked on a certain date, the table below will be generating 
+          <strong>three rows</strong>
+           and fix columns, each columns are labeled with industry names while the rows indicates the 
+          <strong>Max value, Min value, and the value of the date chosen.</strong>
+           As we compare those input value, we can easily see the intensity of the ware comparing to the rest of the days during the war. Besides, the chart below also can allow one to visually see the damage done to various industry, which really turns out to be different during different phrase of the war. Please begin below and try it yourself!
+        </h5>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="well" role="complementary">
+              <div class="form-group shiny-input-container">
+                <label class="control-label" id="char-label" for="char-selectized">Select a Date</label>
+                <div>
+                  <select id="char" tabindex="-1" class="selectized shiny-bound-input" style="display: none;"><option value="02/04/2022" selected="selected">02/04/2022</option></select><div class="selectize-control single plugin-selectize-plugin-a11y"><div class="selectize-input items full has-options has-items"><div class="item" data-value="02/04/2022">02/04/2022</div><input type="text" autocomplete="off" tabindex="" id="char-selectized" role="combobox" aria-expanded="false" haspopup="listbox" aria-owns="wll60bza3y" style="width: 4px;"></div><div class="selectize-dropdown single plugin-selectize-plugin-a11y" style="display: none;"><div class="selectize-dropdown-content" role="listbox" id="wll60bza3y"></div></div></div>
+                  <script type="application/json" data-for="char" data-nonempty="">{"plugins":["selectize-plugin-a11y"]}</script>
+                </div>
+              </div>
+              <h6>
+                <strong>Note:</strong>
+              </h6>
+              <h6>
+                Selecting a date allow you to vividly view the values on the table during that day via a fine Radar Chart: )
+                <img src="./Info 201 Final Project_files/Stock.jpeg" height="94.81" width="228">
+              </h6>
+              <br>
+              <h5>
+                <strong>Terms:</strong>
+              </h5>
+              <h6>- Bank (VTB Bank): Russian majority state-owned bank headquartered in various federal districts of Russia</h6>
+              <h6>- E-Bank (QIWI): Russian company that provides payment and financial services in Russia and CIS countries</h6>
+              <h6>- Telecom (Mobile TeleSystems): Russia's largest mobile operator and a leading provider of media and digital services</h6>
+              <h6>- Oil (The PJSC Lukoil Oil Company): Russian multinational energy corporation headquartered in Moscow, specializing in the business of extraction, production, transport, and sale of petroleum, natural gas, and petroleum products</h6>
+              <h6>- Airline (Aeroflot-Rossiyskiye Avialinii): The flag carrier and the largest airline of Russia</h6>
+            </form>
+          </div>
+          <div class="col-sm-8" role="main">
+            <h5>
+              <strong>Table Value of the Day</strong>
+              </h5><h6>(Unit: USD)</h6>
+            
+            <div id="table" class="shiny-html-output shiny-bound-output" aria-live="polite"></div>
+            <h5>
+              <strong>The Radar Chart</strong>
+            </h5>
+            <div id="radar" class="shiny-plot-output shiny-bound-output" style="width:100%;height:400px;" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" data-value="Takeaway" id="tab-5577-5">
+        <h1>Summary Takeaways</h1>
+        <p>On this page, we will provide some conclusions from our perspectives after analyzing the data.</p>
+        <p></p>
+        <h3>Currency Analysis</h3>
+        <img src="./Info 201 Final Project_files/exchange_rate.png" height="200" width="400">
+        <p></p>
+        <p>As we can see on the graph, the exchange rate of the USD to the Ruble 
+      increased dramatically at the beginning of the war. It means that the 
+      value of the Russian Ruble was depreciated. When the Biden administrateion 
+      banned the U.S. imports of Russian oil and gas on May 7th, the rate reached
+      its highest point. However, with the continuing of the war, the Russian 
+      government jacked up the interest rate to 20% and imposed strict capital 
+      controls on those wishing to exchange their rubles for dollars. These 
+      policies successfully recovered the Russian ruble to its original price. 
+      Nowadays, the rate is even lower than the rate before the war, which means
+      the rubles one dollar exchange decrease. But it is noteworthy to 
+      observe how long the policies can sustain without harming the Russia economy.</p>
+        <p></p>
+        <h3>Equipment Loss Analysis</h3>
+        <img src="./Info 201 Final Project_files/Equip_loss.jpg" height="200" width="1000">
+        <p></p>
+        <p>As we can see on the graph, at the begining of the war, the losses of each equipment are a lot, which can indicate 
+    the war peak is at the beginning. As times passes by, the losses of aircraft and helicopter decrease, but the
+    loss of tank still fluctuates a lot, which can indicate the war is mainly on land afterwards.</p>
+        <p></p>
+        <h3>Russia Based Firms' Stock Values Analysis</h3>
+        <img src="./Info 201 Final Project_files/Price.jpg" height="200" width="800">
+        <p></p>
+        <p>As we can see on the graph, basically all industries we analyzed (Bank, E-Bank, Telecom, Oil, and Airline) 
+      got damaged severely during the war(Example.Date =&gt; 5/6/2022) comparing to the status before the war (Example.Date =&gt; 2/10/2022). 
+      In addition, we can see that the damage to E-bank, Bank, and Airline industries reamins to be relatively heavier than the 
+      industries of Oil and Telecom as the war begin to cool down, meaning those industies took more time to recover.</p>
+      </div>
+    </div>
+  </div>
+
+
+<div id="ss-connect-dialog" style=""><label>Disconnected from the server.</label> <a id="ss-reload-link" href="https://benedictwyt.shinyapps.io/final-projects/_w_0c74492b/#" class="ss-dialog-link">Reload</a></div><div id="ss-overlay" class="ss-gray-out" style=""></div><div aria-live="assertive" role="log" aria-relevant="additions" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; margin-top: -1px; clip: rect(1px, 1px, 1px, 1px); overflow: hidden;"></div><div id="shiny-disconnected-overlay"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
