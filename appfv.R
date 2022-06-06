@@ -72,7 +72,7 @@ bufan_takeaway_page <-
 
 #Joshua ----------------------------------------------------------------------------------------
     #load in data
-exchange_rate_df <- read.csv("Russia Ruble to USD/USD_RUB Historical Data.csv", fileEncoding = 'UTF-8-BOM')
+exchange_rate_df <- read.csv("USD_RUB Historical Data.csv", fileEncoding = 'UTF-8-BOM')
 
     #cleaning and merging df
 exchange_rate_df <- exchange_rate_df %>%
