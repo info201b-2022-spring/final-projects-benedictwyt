@@ -1,13 +1,13 @@
 name: final-projects
-title: final-projects
+title:
 username:
 account: benedictwyt
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6432825
-bundleId: 5978492
+bundleId: 5980798
 url: https://benedictwyt.shinyapps.io/final-projects/
-when: 1654404891.62821
-lastSyncTime: 1654404891.62821
+when: 1654493137.65359
+lastSyncTime: 1654493137.65359
 asMultiple: FALSE
 asStatic: FALSE

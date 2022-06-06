@@ -176,11 +176,17 @@ char_df <- merge(char_df, oil_LKOH_df, by = "Date")
 char_df <- merge(char_df, airline_AFLT_df, by = "Date")
 
 char_df <- setNames(char_df, c("Date", "Bank","E-Bank","Telecom", "Oil", "Airline"))
+
           #UI 
 benedict_analysis_page <- tabPanel(
   "Russia Based Firms' Stock Values Analysis",
   h1("Impact on Russian Corporations' Stock Value"),
+  h4(strong("Key Question: ")),
   em(h5("Which Industy is Most Significantly Damaged by the War?")),
+  h4(strong("Features: ")),
+  h5("Features of this page allows one to explore the effect of the war in the business world. One of the great indication of regional market performance is", strong("regional-based corporations’ stock values"),
+     ". As you clicked on a certain date, the table below will be generating ", strong("three rows")," and fix columns, each columns are labeled with industry names while the rows indicates the "
+     , strong("Max value, Min value, and the value of the date chosen.")," As we compare those input value, we can easily see the intensity of the ware comparing to the rest of the days during the war. Besides, the chart below also can allow one to visually see the damage done to various industry, which really turns out to be different during different phrase of the war. Please begin below and try it yourself!"),
   setBackgroundColor("ghostwhite"),
   br(),
   sidebarLayout(
@@ -243,7 +249,7 @@ server <- function(input, output){
   output$line <- renderPlot({
     if (input$equipment == 1) {
       equipment_loss <- select(equipment_loss_new, day, new_aircraft) 
-      ggplot(data = equipment_loss, aes(x=day, y = new_aircraft)) + 
+      ggplot(data = equipment_loss, aes(x=day, y = new_aircraft)) + ggtitle("Russian Equipment Loss VS. Time Graph")+
         geom_line() + geom_point() + xlab("Number of Days Since the War Started") +
         ylab("Number of Aircraft Loss on Each Day")
     } else if (input$equipment == 2) {
@@ -253,7 +259,7 @@ server <- function(input, output){
         ylab("Number of Helicopter Loss on Each Day")
     } else {
       equipment_loss <- select(equipment_loss_new, day, new_tank)
-      ggplot(data = equipment_loss, aes(x=day, y = new_tank)) +
+      ggplot(data = equipment_loss, aes(x=day, y = new_tank)) + ggtitle("Equipment Loss Vs. Time Graph") +
         geom_line() + geom_point() + xlab("Number of Days Since the War Started") +
         ylab("Number of Tank Loss on Each Day")
     }
